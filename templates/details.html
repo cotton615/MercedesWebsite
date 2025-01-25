@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Boutique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='details.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mercedes-Benz Auto <span class="highlight">Boutique</span></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>{{ car.model }}</h2>
+        <div class="car-details">
+            <div class="carousel">
+                <div id="carCarousel" class="carousel-inner">
+                    {% for image in images %}
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <img src="{{ url_for('static', filename=image.image_url) }}" alt="{{ car.model }}">
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="carousel-control-prev" onclick="prevSlide()">&#10094;</div>
+                <div class="carousel-control-next" onclick="nextSlide()">&#10095;</div>
+            </div>
+            
+            <div class="text-container">
+                <div class="chr">
+                    
+                    <p>Carcass: {{ car.carcass }}</p>
+                    <p>Transmission: {{ car.transmission }}</p>
+                    <p>Engine: {{ car.engine }}</p>
+                </div>
+                
+                <div class="descript">
+                    <p>{{ car.descript }}</p>
+                    <ul>
+                        <li>{{ car.feature1 }}</li>
+                        <li>{{ car.feature2 }}</li>
+                        <li>{{ car.feature3 }}</li>
+                        <li>{{ car.feature4 }}</li>
+                    </ul>
+                </div>
+                <a href="{{ url_for('deal') }}">
+                    <button class="btn">Make a Deal</button>
+                </a>
+                
+            </div>
+            
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Mercedes-Benz. All rights reserved.</p>
+    </footer>
+    <script>
+        const carouselInner = document.querySelector('#carCarousel');
+        const slides = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+            const offset = -currentIndex * 100;
+            carouselInner.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Показать первый слайд при загрузке страницы
+        showSlide(currentIndex);
+    </script>
+</html>

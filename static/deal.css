@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+.highlight {
+    color: red;
+}
+main {
+    overflow-x: hidden;
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center;     /* Центрирует по вертикали */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.container {
+    max-width: 550px; /* Задайте максимальную ширину по вашему усмотрению */
+    width: 100%;      /* Ширина контейнера */
+    padding: 0px;    /* Добавляет внутренние отступы */
+    background-color: #fff; /* Цвет фона окна */
+    border-radius: 8px; /* Закругляет углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+}
+
+.header {
+    background-color: #333; /* Серый цвет для верхней полоски */
+    height: 50px; /* Высота полоски */
+    border-radius: 8px 8px 0 0; /* Закругление только верхних углов контейнера */
+}
+
+.content {
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Располагает кнопки вертикально */
+    margin-top: 20px; /* Отступ сверху для кнопок */
+}
+
+.btn {
+    margin-inline: 220px;
+    padding: 10px;
+    margin-bottom: 10px; /* Отступ между кнопками */
+    background-color: red; /* Цвет кнопки */
+    color: #fff; /* Цвет текста */
+    border: none;
+    border-radius: 4px; /* Закругление углов кнопки */
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    box-shadow: 0px 0px 5px 1px rgb(163, 0, 0);
+}
+
+.btn:hover {
+    background-color: rgb(118, 0, 0); /* Цвет кнопки при наведении */
+    box-shadow: 0px 0px 5px 1px rgb(118, 0, 0);
+    
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Располагает элементы формы вертикально */
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input {
+    padding: 10px;
+    margin-bottom: 15px; /* Отступ между полями ввода */
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Закругление углов полей ввода */
+    font-size: 16px;
+}

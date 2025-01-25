@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.highlight {
+    color: red;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+main {
+    overflow-x: hidden;
+    flex: 1;
+    padding: 5px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+.content h1, .content h2 {
+    text-align: center;
+    color: #333;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 5px;
+    flex: 1 1 calc(33% - 40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    text-align: center;
+}
+
+.mission {
+    text-align: center;
+}
+
+.content .about {
+    font-size: xxx-large;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}

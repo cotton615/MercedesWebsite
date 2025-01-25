@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Boutique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='deal.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mercedes-Benz Auto <span class="highlight">Boutique</span></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="header"></div> <!-- Серая полоска -->
+            <div class="content">
+                <form class="contact-form">
+                    <label for="full-name">Your Full Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Name" required>
+                    
+                    <input type="text" id="second-name" name="second-name" placeholder="Surname" required>
+
+                    <label for="phone-email">Phone number or email:</label>
+                    <input type="text" id="phone-email" name="phone-email" placeholder="Enter phone or Emal" required>
+
+                    <button type="submit" class="btn">Send</button>
+                    
+                </form>
+
+
+                
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mercedes-Benz. All rights reserved.</p>
+    </footer>
+</body>

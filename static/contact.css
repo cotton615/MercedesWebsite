@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+.highlight {
+    color: red;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+    padding: 5px;
+    width: 99vw;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.deal-container {
+    scale: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust this value to bring elements closer together */
+    max-width: 100%;
+}
+
+.deal-button {
+    background-color: red; /* Black background for the button */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding for size */
+    font-size: 2rem; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+    box-shadow: 0px 0px 10px 1px rgb(163, 0, 0);
+}
+
+.deal-button:hover {
+    background-color: rgb(118, 0, 0); /* Darker background on hover */
+    box-shadow: 0px 0px 10px 1px rgb(118, 0, 0);
+}
+
+.deal_text {
+    margin-left: 10px; /* Adjust this value as needed */
+    font-size: 1.5rem;
+}
+
+.deal_text {
+    margin-left: 10px; /* Adjust this value as needed */
+}

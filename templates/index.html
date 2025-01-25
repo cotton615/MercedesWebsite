@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Boutique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mercedes-Benz Auto <span class="highlight">Boutique</span></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li class="filter-li">
+                    <button class="filter-btn">Filter</button>
+                    <div class="filter-menu">
+                        <form method="get" action="{{ url_for('index') }}">
+                            <label for="model">Model:</label>
+                            <select name="model" id="model">
+                                <option value="all">All</option>
+                                {% for car in cars %}
+                                    <option value="{{car.model}}">{{car.model}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <label for="Carcass">Carcass:</label>
+                            <select name="Carcass" id="Carcass">
+                                {% for car in cars %}
+                                    <option value="{{car.carcass}}">{{car.carcass}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <label for="Transmission">Transmission:</label>
+                            <select name="Transmission" id="Transmission">
+                                {% for car in cars %}
+                                    <option value="{{car.transmission}}">{{car.transmission}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <label for="engine-volume">Engine:</label>
+                            <select name="engine-volume" id="engine-volume">
+                                {% for car in cars %}
+                                    <option value="{{ car.engine }}">{{ car.engine }}</option>
+                                {% endfor %}
+                            </select>
+
+                            <button type="submit">Apply Filter</button>
+                        </form>
+                    </div>
+                </li> -->
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cars">
+            <h2>Our Cars</h2>
+            <div class="products-wrapper">
+
+                {% for car in cars %}
+                
+                <div class="product-card">
+                    <a href="{{ url_for('details', product_id=car.id) }}"> 
+                        <img src="{{ url_for('static', filename=car.img) }}" alt="{{ car.model }}">
+                        <h3 class="product-title">{{ car.model }}</h3>
+                        <div class="details">
+                            <p>Carcass: {{ car.carcass }};</p>
+                            <p>Transmission: {{ car.transmission }};</p>
+                            <p>Engine: {{ car.engine }} </p>
+                        </div>
+                    </a>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mercedes-Benz. All rights reserved.</p>
+    </footer>
+</body>
+</html>
